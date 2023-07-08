@@ -2,6 +2,7 @@ import Image from "next/image"
 import Dane from "/public/Dane.svg"
 import { LiaHandPointDown } from 'react-icons/lia'
 import ProjectCard from "@/components/Navbar/ProjectCard"
+import ContactForm from "@/components/Navbar/ContactForm"
 
 export default function Page() {
   return (
@@ -56,9 +57,15 @@ export default function Page() {
         </h2>
         <ul>
           <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
+          <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
         </ul>
+      </section>
+      <section>
+      <h2 className="mb-8 text-2xl font-bold" id="contact">
+          Contact
+        </h2>
+       <ContactForm />
       </section>
     </main>
   )
