@@ -1,8 +1,8 @@
 import Image from "next/image" 
 import Dane from "/public/Dane.svg"
 import { LiaHandPointDown } from 'react-icons/lia'
-import ProjectCard from "@/components/Navbar/ProjectCard"
-import ContactForm from "@/components/Navbar/ContactForm"
+import ProjectCard from "../components/ProjectCard/ProjectCard"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 export default function Page() {
   return (
