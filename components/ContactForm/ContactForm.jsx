@@ -9,7 +9,7 @@ export default function ContactForm() {
     };
     return (
         <form onSubmit={handleSubmit} method="POST" className='flex flex-col rounded-lg p-6 shadow-lg mb-6'>
-           <h3 className="font-semibold mb-6">Drop me a message via this form to get in touch</h3>
+           <h3 className="font-semibold mb-6">Drop me a message to get in touch</h3>
            <div className="flex flex-col sm:flex-row mb-6">
              <input type="text" name="First Name" placeholder="First Name" className='border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 placeholder:p-2 p-2 mb-6 sm:mb-0' />
              <input type="text" name="Last Name" placeholder=" Last Name" className='border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 sm:ml-2 placeholder:p-2 p-2' />
