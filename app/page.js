@@ -3,8 +3,13 @@ import Dane from "/public/Dane.svg"
 import { LiaHandPointDown } from 'react-icons/lia'
 import ProjectCard from "../components/ProjectCard/ProjectCard"
 import ContactForm from "../components/ContactForm/ContactForm"
+import Link from "next/link"
+import { getAllPostsMeta } from "../mdx/index"
 
-export default function Page() {
+const Page = async () => {
+
+  const posts = await getAllPostsMeta()
+
   return (
     <main className="mx-auto mt-52 mb-24 max-w-3xl px-6 w-full grow">
       <section className="mb-24 flex flex-col-reverse gap-y-4 gap-x-10 md:flex-row items-start md:items-center">
@@ -20,36 +25,26 @@ export default function Page() {
           <Image src={Dane} alt="A picture of Dane" className="w-3/5 h-3/5 md:w-full md:h-full"/>
         </div>
       </section>
-      <section className="mb-24" id="posts">
+      <section className="mb-24 container" id="posts">
         <h2 className="mb-8 text-2xl font-bold">
           Recent Posts
         </h2>
-        <ul>
-          <li className="mb-6">
-            <h3 className=" font-semibold">
-            Post One.
-            </h3>
-            <p className=" text-sm font-light">
-              Description of post one.
-            </p>
-          </li>
-          <li className="mb-6">
-            <h3 className=" font-semibold">
-            Post Two.
-            </h3>
-            <p className=" text-sm font-light">
-              Description of post two.
-            </p>
-          </li>
-          <li className="mb-6">
-            <h3 className=" font-semibold">
-            Post Three.
-            </h3>
-            <p className=" text-sm font-light">
-              Description of post three.
-            </p>
-          </li>
-        </ul>
+        <div className="">
+        {posts?.map(post => (
+          <div key={post?.title} className="mb-6">
+            <Link
+              href={`posts/${post.slug}`}
+              className=""
+            >
+              <h3 className='font-semibold'>{post.title}</h3>
+              <p className='text-sm font-light'>{post.description}</p>
+              <time className='text-[12px] text-gray-400 mb-6'>
+                {post.publishDate}
+              </time>
+            </Link>
+          </div>
+        ))}
+        </div>
       </section>
       <section className="mb-24">
         <h2 className="mb-8 text-2xl font-bold">
@@ -70,3 +65,5 @@ export default function Page() {
     </main>
   )
 }
+
+export default Page
