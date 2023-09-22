@@ -9,6 +9,10 @@ import { BiLogoTailwindCss } from 'react-icons/bi'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { BiLogoReact } from 'react-icons/bi'
 import { SiMdx } from 'react-icons/si'
+import { SiStyledcomponents } from 'react-icons/si'
+import { BiLogoFirebase } from 'react-icons/bi'
+import { SiTypescript } from 'react-icons/si'
+import { SiCss3 } from 'react-icons/si'
 
 
 const Page = async () => {
@@ -25,7 +29,6 @@ const Page = async () => {
     return new Date(cleanedDate);
   }
   
-
   return (
     <main className="mx-auto mt-52 mb-24 max-w-3xl px-6 w-full grow">
       <section className="mb-24 flex flex-col-reverse gap-y-4 gap-x-10 md:flex-row items-start md:items-center">
@@ -71,9 +74,9 @@ const Page = async () => {
           Recent Projects
         </h2>
         <ul>
-          <ProjectCard icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="My Portfolio Site was built with NextJS, React, Tailwind, and MDX" />
-          <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
-          <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
+          <ProjectCard icon={<div className="flex"><BiLogoReact className="h-6 w-6 mr-1 "/><SiStyledcomponents className="h-6 w-6 mr-1 "/><BiLogoFirebase className="h-6 w-6 mr-1 "/></div>} title="Ecommerce Clothing Store" description="An eccomerce store built with React and Styled Components on the front end, and Firebase on the back end for storing clothing data and user authentication." />
+          <ProjectCard icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="This portfolio site built with NextJS, React, Tailwind, and MDX for content management." />
+          <ProjectCard icon={<div className="flex"><SiTypescript className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><SiCss3 className="h-6 w-6 mr-1 "/></div>} title="Monsters Rolodex" description="A rolodex of monsters, built with Typescript, React and CSS3." />
         </ul>
       </section>
       <section>
