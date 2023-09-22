@@ -74,9 +74,9 @@ const Page = async () => {
           Recent Projects
         </h2>
         <ul>
-          <ProjectCard icon={<div className="flex"><BiLogoReact className="h-6 w-6 mr-1 "/><SiStyledcomponents className="h-6 w-6 mr-1 "/><BiLogoFirebase className="h-6 w-6 mr-1 "/></div>} title="Ecommerce Clothing Store" description="An eccomerce store built with React and Styled Components on the front end, and Firebase on the back end for storing clothing data and user authentication." />
-          <ProjectCard icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="This portfolio site built with NextJS, React, Tailwind, and MDX for content management." />
-          <ProjectCard icon={<div className="flex"><SiTypescript className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><SiCss3 className="h-6 w-6 mr-1 "/></div>} title="Monsters Rolodex" description="A rolodex of monsters, built with Typescript, React and CSS3." />
+          <ProjectCard link="/projects/ecommerce-clothing-store" icon={<div className="flex"><BiLogoReact className="h-6 w-6 mr-1 "/><SiStyledcomponents className="h-6 w-6 mr-1 "/><BiLogoFirebase className="h-6 w-6 mr-1 "/></div>} title="Ecommerce Clothing Store" description="An eccomerce store built with React and Styled Components on the front end, and Firebase on the back end for storing clothing data and user authentication." />
+          <ProjectCard link="/projects/portfolio-site" icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="This portfolio site built with NextJS, React, Tailwind, and MDX for content management." />
+          <ProjectCard link="/projects/monsters-rolodex" icon={<div className="flex"><SiTypescript className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><SiCss3 className="h-6 w-6 mr-1 "/></div>} title="Monsters Rolodex" description="A rolodex of monsters, built with Typescript, React and CSS3." />
         </ul>
       </section>
       <section>
