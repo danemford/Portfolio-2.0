@@ -4,11 +4,18 @@ import { LiaHandPointDown } from 'react-icons/lia'
 import ProjectCard from "../components/ProjectCard/ProjectCard"
 import ContactForm from "../components/ContactForm/ContactForm"
 import Link from "next/link"
-import { getAllPostsMeta } from "../mdx/index"
+import { getAllPostsMeta, getAllProjectsMeta } from "../mdx/index"
+import { BiLogoTailwindCss } from 'react-icons/bi'
+import { TbBrandNextjs } from 'react-icons/tb'
+import { BiLogoReact } from 'react-icons/bi'
+import { SiMdx } from 'react-icons/si'
+
 
 const Page = async () => {
 
-  const posts = await getAllPostsMeta()
+  const posts = await getAllPostsMeta();
+
+  const projects = await getAllProjectsMeta();
 
   function parseDateString(dateString) {
     // Remove the 'th', 'st', 'nd', 'rd' from the date string
@@ -42,7 +49,7 @@ const Page = async () => {
           {posts?.sort((a, b) => parseDateString(b.publishDate) - parseDateString(a.publishDate))
             .slice(0, 4)
             .map(post => (
-              <div className="mb-6" key={post?.title}>
+              <div className="mb-6 transition-transform hover:scale-[1.01] " key={post?.title}>
                 <Link href={`posts/${post.slug}`}>
                     <h3 className='font-semibold'>{post.title}</h3>
                     <p className='text-sm font-light'>{post.description}</p>
@@ -64,7 +71,7 @@ const Page = async () => {
           Recent Projects
         </h2>
         <ul>
-          <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
+          <ProjectCard icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="My Portfolio Site was built with NextJS, React, Tailwind, and MDX" />
           <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
           <ProjectCard icon="Project Icon" title="Project Title" description="Project Description" />
         </ul>
