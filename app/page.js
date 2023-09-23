@@ -65,7 +65,7 @@ const Page = async () => {
         </div>
         <div>
           <Link href={`posts/`}>
-          <h3 className="mb-8 font-semibold">See All Posts</h3>
+          <h3 className="mb-8 font-semibold hover:underline hover:decoration-sky-500 hover:underline-offset-8">See All Posts</h3>
           </Link>
         </div>
       </section>
@@ -78,6 +78,11 @@ const Page = async () => {
           <ProjectCard link="/projects/portfolio-site" icon={<div className="flex"><TbBrandNextjs className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><BiLogoTailwindCss className="h-6 w-6 mr-1"/><SiMdx className="h-6 w-6 mr-1"/></div>} title="Portfolio Site" description="This portfolio site built with NextJS, React, Tailwind, and MDX for content management." />
           <ProjectCard link="/projects/monsters-rolodex" icon={<div className="flex"><SiTypescript className="h-6 w-6 mr-1 "/><BiLogoReact className="h-6 w-6 mr-1"/><SiCss3 className="h-6 w-6 mr-1 "/></div>} title="Monsters Rolodex" description="A rolodex of monsters, built with Typescript, React and CSS3." />
         </ul>
+        <div>
+          <Link href={`projects/`}>
+          <h3 className="mb-8 font-semibold hover:underline hover:decoration-sky-500 hover:underline-offset-8">See All Projects</h3>
+          </Link>
+        </div>
       </section>
       <section>
       <h2 className="mb-8 text-2xl font-bold" id="contact">
