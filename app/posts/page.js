@@ -11,7 +11,8 @@ const Page = async () => {
             <h1 className='text-3xl font-bold'>All Posts</h1>
             <div className='flex-col gap-6 mt-6'>
               {posts?.map(post => (
-                <Link
+                <>
+                  <Link
                   href={`posts/${post.slug}`}
                   key={post?.title}
                   className=''
@@ -27,6 +28,8 @@ const Page = async () => {
                     {post.publishDate}
                   </time>
                 </Link>
+                <hr className="mb-6"/>
+                </>
               ))}
             </div>
           </div>
