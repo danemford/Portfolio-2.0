@@ -37,7 +37,7 @@ const Page = async () => {
             Hey there, I'm Dane.
           </h1>
           <h2 className="pt-6">
-            I'm glad you're here.  Join me on my web development journey and uncover the invaluable insights that I've learned along the way. <LiaHandPointDown className="text-2xl mt-2" />
+            I'm glad you're here.  Come join me on my web development journey and uncover the invaluable insights that I've learned along the way. <LiaHandPointDown className="text-2xl mt-2" />
           </h2>
         </div>
         <div className="">
