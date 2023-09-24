@@ -1,0 +1,117 @@
+---
+title: 'React Context API vs. Redux'
+author: 'Dane Ford'
+publishDate: 'June 15th, 2023'
+description: 'Which one you should use for your next project'
+category: 'technical'
+---
+
+# {frontmatter.title}
+<span className="text-sm text-gray-400 mt-0">{frontmatter.publishDate}</span>
+
+In the ever-evolving landscape of state management in React, two prominent contenders emerge: the React Context API and Redux. Both tools offer unique approaches to managing global state, but how do they stack up against each other?
+
+## **1. Introduction**
+
+State management is a pivotal aspect of React applications, determining how data flows, components interact, and features are implemented. The React Context API and Redux are two popular solutions, but they cater to different needs and scenarios.
+
+## **2. React Context API**
+
+### **What is it?**
+
+The Context API is a built-in feature of React, designed to share data that can be considered "global" for a tree of React components.
+
+```javascript
+// Creating a context
+const ThemeContext = React.createContext('light');
+
+// Using a Provider to pass the current theme to the tree below
+function App() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+// Accessing the context value in a component
+function Toolbar() {
+  const theme = React.useContext(ThemeContext);
+  return <div>Active Theme: {theme}</div>;
+}
+```
+### **Strengths:**
+
+- **Simplicity:** No additional libraries required.
+- **Integrated:** Being a part of React itself, it offers a seamless experience.
+- **Flexibility:** Can be combined with hooks for more intuitive state management.
+
+### **Use Cases:**
+
+- Small to medium-sized applications.
+- When you want to avoid prop drilling.
+- Projects where you want to keep dependencies minimal.
+
+## **3. Redux**
+
+### **What is it?**
+
+Redux is an independent library that provides a centralized store for state.
+
+```javascript
+// Action types
+const TOGGLE_THEME = 'TOGGLE_THEME';
+
+// Action creator
+function toggleTheme() {
+  return {
+    type: TOGGLE_THEME
+  };
+}
+
+// Reducer
+function themeReducer(state = 'light', action) {
+  switch (action.type) {
+    case TOGGLE_THEME:
+      return state === 'light' ? 'dark' : 'light';
+    default:
+      return state;
+  }
+}
+
+// Store
+const store = Redux.createStore(themeReducer);
+
+// Dispatching an action to toggle theme
+store.dispatch(toggleTheme());
+
+// Getting the current theme
+console.log(store.getState()); // Outputs: 'dark'
+```
+
+### **Strengths:**
+
+- **Predictability:** Enforces unidirectional data flow.
+- **Middleware Support:** Allows for more complex operations and asynchronous actions.
+- **DevTools:** Offers powerful tools for debugging and state time-travel.
+- **Ecosystem:** A vast array of plugins and integrations.
+
+### **Use Cases:**
+
+- Large applications with complex state interactions.
+- When you need a strict and predictable state management pattern.
+- Projects that require state persistence or synchronization across tabs/windows.
+
+## **4. Key Differences**
+
+- **Complexity:** While the Context API is straightforward and integrated into React, Redux comes with a steeper learning curve due to its principles and middleware.
+  
+- **Performance:** Redux is optimized for performance with features like memoization. The Context API might require additional optimizations for larger applications.
+  
+- **Flexibility vs. Control:** The Context API offers more flexibility but less control over the state, while Redux provides strict patterns and more predictability.
+
+
+
+## **5. Wrap Up**
+
+Choosing between the React Context API and Redux boils down to the needs of your project. For simpler applications, the Context API might suffice. However, for larger, more complex projects where predictability and control are paramount, Redux stands out as the go-to choice.

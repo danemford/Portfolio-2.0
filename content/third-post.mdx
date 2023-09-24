@@ -1,0 +1,86 @@
+---
+title: 'Mastering State in React'
+author: 'Dane Ford'
+publishDate: 'May 20th, 2023'
+description: "Managing a Component's Memory With State"
+category: 'technical'
+---
+
+# {frontmatter.title}
+<span className="text-sm text-gray-400 mt-0">{frontmatter.publishDate}</span>
+
+React components are dynamic, interactive, and, most importantly, they remember. This "memory" of a component, which allows it to recall previous interactions or changes, is termed as its "state."
+
+## **1. Introduction to State**
+
+State in React is a mechanism that allows components to store and manage information that can change over time. Whether it's updating a form, changing an image in a carousel, or adding an item to a shopping cart, state ensures that these interactions are remembered and reflected on the screen.
+
+### **Why Not Just Use Regular Variables?**
+
+While one might be tempted to use local variables to manage such interactions, they come with limitations. Local variables don't persist between renders, and changes to them don't trigger component re-renders. This is where the `useState` Hook comes into play, providing both persistence across renders and reactivity to changes.
+
+## **2. Diving into the `useState` Hook**
+
+`useState` is a fundamental tool for state management in React. When you invoke it, you're essentially asking React to "remember" a piece of data for your component.
+
+### **What's a Hook?**
+
+Hooks, functions prefixed with "use", allow you to tap into React's features directly from your functional components. They should always be invoked at the top level of your components, ensuring they run in the same order on every render.
+
+### **Breaking Down `useState`**
+
+Using `useState`, you can declare a state variable and a function to update it. For instance:
+
+```javascript
+const [index, setIndex] = useState(0);
+```
+
+Here, `index` is the state variable, and `setIndex` is its updater function. The initial value of `index` is set to `0`.
+
+## **3. State: Private, Independent, and Isolated**
+
+State is confined to a specific component instance. This means if you render the same component multiple times, each instance maintains its own unique state. Altering the state in one instance won't influence the others.
+
+For example, consider a simple `Counter` component:
+
+```javascript
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+If you render the `Counter` component twice:
+
+```javascript
+function App() {
+  return (
+    <div>
+      <Counter />
+      <Counter />
+    </div>
+  );
+}
+```
+
+You'll notice that each `Counter` maintains its own count. Clicking the "Increment" button on one counter will not affect the other.
+
+## **4. Best Practices with State**
+
+- **Multiple States:** A component can have multiple state variables. React internally keeps track of them based on their declaration order.
+  
+- **State Sharing:** To synchronize state across multiple components, lift the state to their nearest shared parent.
+  
+- **State Privacy:** State is private to the component that declares it. Parent components remain unaware of a child's state and can't modify it.
+
+## **Wrap Up**
+
+State is a powerful feature in React that allows components to react dynamically to user interactions and other changes. By understanding and effectively using state, developers can create interactive and responsive user interfaces.
