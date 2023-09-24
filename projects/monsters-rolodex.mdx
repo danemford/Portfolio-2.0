@@ -5,14 +5,36 @@ publishDate: 'March 3rd, 2023'
 description: 'A rolodex of monsters, built with Typescript, React and CSS3.'
 ---
 
-# This is our first post
 
-Here is a regular paragraph
+# {frontmatter.title}
+<span className="text-sm text-gray-400 mt-0">{frontmatter.publishDate}</span>
 
-here is a list:
+This project is a visual directory of fictional "monsters," offering users an interactive and dynamic browsing experience. With its card-based interface and real-time search functionality, "Monsters Rolodex" stands as a testament to the seamless integration of design, functionality, and external data sources.
 
-- Item one
-- Item two
-- Item three
+Check out the <a href="https://github.com/danemford/monsters-rolodex" target="_blank">Github repo here</a>
 
-## This is an h2 element
+Check out the <a href="https://aesthetic-lolly-235b41.netlify.app/" target="_blank">live site here</a>
+
+## Tech Stack
+
+Here is the tech stack I used in this project:
+- **React:** The core of the application, responsible for building the user interface, managing component state, and handling user interactions.
+- **TypeScript:** A superset of JavaScript, TypeScript introduces static types and interfaces to the project, ensuring robustness and maintainability.
+- **REST API:** An online server used to dynamically fetch data, populating the Rolodex with diverse monster profiles.
+
+## Features
+
+Here are some of the features:
+- Dynamic Search: A real-time search functionality that allows users to filter through the monster profiles, updating the displayed cards based on the search input.
+- Card-based Interface: Each monster is elegantly represented as a card, complete with a unique avatar, name, and email, offering users a visually rich browsing experience.
+- Responsive Layout: Designed to adapt and look stunning on a variety of devices, from desktops to mobiles.
+
+## Challenges
+
+While integrating TypeScript with React and ensuring the dynamic search functionality worked seamlessly, there were a few learning curves - such as fetching data from the REST API. However, these challenges were valuable learning experiences. 
+## Future Improvements
+
+Here are some of the features I would like to add in the future:
+- **Detailed Profiles:** An extended view for each monster, providing more in-depth information, such as origin, abilities, and lore.
+- **Interactive Animations:** To further engage users with delightful card transitions and hover effects.
+- **Theme Toggle:** Offering users the choice between a light and dark mode for a more personalized browsing experience.

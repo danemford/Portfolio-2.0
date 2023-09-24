@@ -5,7 +5,7 @@ import { LiaHandPointRightSolid } from 'react-icons/lia'
 const Footer = () => {
 
     return (
-        <footer className="border-t-sky-500/75 border-t-2 px-8">
+        <footer className="border-t-sky-500/75 border-t px-12">
             <div className='flex justify-between my-6'>
                 <p className='flex'>You can also find me here<LiaHandPointRightSolid className='h-6 w-6 ml-1'/> </p>
                 <div className='flex px-6'>
@@ -14,7 +14,8 @@ const Footer = () => {
                     </Link>
                     <Link href='https://www.linkedin.com/in/dane-ford/'>
                       <AiFillLinkedin className='h-8 w-8'/>
-                    </Link></div>
+                    </Link>
+                </div>
             </div>
 
         </footer>

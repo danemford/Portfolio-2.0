@@ -34,10 +34,10 @@ const Page = async () => {
       <section className="mb-24 flex flex-col-reverse gap-y-4 gap-x-10 md:flex-row items-start md:items-center">
         <div className="">
           <h1 className="text-3xl font-bold">
-            Hey there, I'm Dane.
+            Hey there, I&rsquo;m Dane.
           </h1>
           <h2 className="pt-6">
-            I'm glad you're here.  Come join me on my web development journey and uncover the invaluable insights that I've learned along the way. <LiaHandPointDown className="text-2xl mt-2" />
+            I&rsquo;m glad you&rsquo;re here. Come join me on my web development journey and uncover the invaluable insights that I&rsquo;ve learned along the way. <LiaHandPointDown className="text-2xl mt-2" />
           </h2>
         </div>
         <div className="">
