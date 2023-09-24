@@ -54,7 +54,7 @@ const Navbar = () => {
                                 {({ active }) => (
                                     <Link
                                         className={`${active ? 'inline-flex items-center gap-6 px-8 py-2 text-gray-300 text-sky-500 hover:bg-gray-600' : 'inline-flex items-center gap-6 px-8 py-2 text-gray-300'}`}
-                                        href="/#contact"
+                                        href="/contact"
                                     >
                                         Contact
                                     </Link>
@@ -88,8 +88,8 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                className={`${pathname === '/#contact' ? activeStyle : nonActiveStyle}`}
-                                href="/#contact">
+                                className={`${pathname === '/contact' ? activeStyle : nonActiveStyle}`}
+                                href="/contact">
                                 Contact
                             </Link>
                         </li>
