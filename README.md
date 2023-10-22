@@ -13,7 +13,7 @@ This is my portfolio site built with NextJS, React, Tailwind, and MDX for conten
 
 Clean, Minimalist, Responsive Design: The site is fully responsive, ensuring a seamless user experience across all devices.\
 Filter Posts By Category: Users can filter posts by category, allowing them to quickly find the content they are looking for.\
-MDX Content Management: The site's content is managed with MDX, allowing local storage and the seamless integration of JSX and React components.\
+MDX Content Management: The site's content is managed with MDX, allowing local storage and the seamless integration of JSX and React components.
 
 ## Challenges
 This was my first time using MDX, so I had to learn how to use it and how to integrate it with NextJS.
